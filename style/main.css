@@ -75,6 +75,40 @@ body {
   top: 20vh;
   animation: slideIn 1s ease-out;
 }
+/* Style for the profile image */
+.profile-picture {
+  width: 150px; /* Fixed width */
+  height: 150px; /* Fixed height */
+  border-radius: 50%; /* Make the image circular */
+  overflow: hidden; /* Ensure the image doesn't exceed the border */
+  border: 5px solid #4CAF50; /* Add a green border around the image */
+  transition: transform 0.5s ease, box-shadow 0.5s ease; /* Smooth animation for transform and shadow */
+  object-fit: cover; /* Ensure the image fits within the container */
+  cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+/* Hover effect for profile image */
+.profile-picture:hover {
+  transform: scale(1.1); /* Slightly enlarge the image */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Add a shadow effect on hover */
+}
+
+/* Animation on image load */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.profile-picture {
+  animation: fadeIn 1s ease-in-out; /* Apply the fade-in animation */
+}
+
 
 @keyframes slideIn {
   from {
