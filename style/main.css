@@ -58,10 +58,39 @@ body {
   height: 150px; /* Fixed height */
   border-radius: 50%; /* Make the image circular */
   overflow: hidden; /* Ensure the image doesn't exceed the border */
-  border: 5px solid #4CAF50; /* Add a green border around the image */
-  transition: transform 0.5s ease, box-shadow 0.5s ease; /* Smooth animation for transform and shadow */
+  border: 5px solid transparent; /* Initially, set the border to transparent */
+  position: relative; /* Make sure the border animation stays in position */
   object-fit: cover; /* Ensure the image fits within the container */
   cursor: pointer; /* Change cursor to pointer on hover */
+  animation: fadeIn 1s ease-in-out, glowing-border 1.5s linear infinite; /* Apply the fade-in and glowing border animations */
+}
+
+/* Animation for glowing border */
+@keyframes glowing-border {
+  0% {
+    border-color: red;
+  }
+  14% {
+    border-color: orange;
+  }
+  28% {
+    border-color: yellow;
+  }
+  42% {
+    border-color: green;
+  }
+  57% {
+    border-color: blue;
+  }
+  71% {
+    border-color: indigo;
+  }
+  85% {
+    border-color: violet;
+  }
+  100% {
+    border-color: red;
+  }
 }
 
 /* Hover effect for profile image */
@@ -82,9 +111,6 @@ body {
   }
 }
 
-.profile-picture {
-  animation: fadeIn 1s ease-in-out; /* Apply the fade-in animation */
-}
 
 
 .container {
