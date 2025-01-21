@@ -222,15 +222,15 @@ body {
 }
 
 .baloons img:nth-child(odd) {
-  right: -10%;
+  right: -5%;
 }
 
 .baloons img:nth-child(even) {
-  left: -10%;
+  left: -5%;
 }
 
 .baloons img:nth-child(3n + 0) {
-  left: 30%;
+  left: 20%;
   z-index: 1; /* Place later balloons behind */
 }
 
@@ -240,7 +240,7 @@ body {
 }
 
 .baloons img:nth-child(3n + 2) {
-  left: 40%;
+  left: 30%;
   z-index: 1; /* Continue placing balloons behind */
 }
 
