@@ -52,29 +52,6 @@ body {
   background-color: #d6ec41ef; /* Even darker blue when clicked */
   transform: scale(1) translate(-50%, -50%); /* Reset scale when clicked */
 }
-
-
-.container {
-  height: 100vh;
-  margin: 0 auto;
-  overflow: hidden;
-  position: relative;
-  text-align: center;
-  visibility: hidden;
-  width: 100vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-
-.container > div {
-  left: 0;
-  position: absolute;
-  right: 0;
-  top: 20vh;
-  animation: slideIn 1s ease-out;
-}
 /* Style for the profile image */
 .profile-picture {
   width: 150px; /* Fixed width */
@@ -109,6 +86,28 @@ body {
   animation: fadeIn 1s ease-in-out; /* Apply the fade-in animation */
 }
 
+
+.container {
+  height: 100vh;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  visibility: hidden;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.container > div {
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 20vh;
+  animation: slideIn 1s ease-out;
+}
 
 @keyframes slideIn {
   from {
@@ -151,7 +150,31 @@ body {
   width: 600px;
   background-color: rgba(255, 255, 255, 0.8);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  animation: fadeIn 1s ease-in-out;
+  animation: fadeIn 1s ease-in-out, borderGlow 2s infinite alternate;
+}
+
+/* Colorful border animation */
+@keyframes borderGlow {
+  0% {
+    border-color: red;
+    box-shadow: 0 0 10px red;
+  }
+  25% {
+    border-color: orange;
+    box-shadow: 0 0 10px orange;
+  }
+  50% {
+    border-color: yellow;
+    box-shadow: 0 0 10px yellow;
+  }
+  75% {
+    border-color: green;
+    box-shadow: 0 0 10px green;
+  }
+  100% {
+    border-color: blue;
+    box-shadow: 0 0 10px blue;
+  }
 }
 
 .text-box p {
@@ -176,9 +199,13 @@ body {
   transition: background-color 0.3s ease;
 }
 
+
 .text-box .fake-btn:hover {
   background-color: #4682b4;
+  transform: translateY(-5px);
 }
+
+
 
 .five p {
   font-size: 2rem;
@@ -269,7 +296,7 @@ body {
 }
 
 .baloons img:nth-child(3n + 1) {
-  right: 15%;
+  right: 10%;
   z-index: 1; /* Ensure this also appears later */
 }
 
